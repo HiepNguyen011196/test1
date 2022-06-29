@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau3</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number = +prompt("Enter number x");
+    let arr = [];
+    function checkPrime(n) {
+      if (n < 2) return false;
+      if (n < 4) return true;
+      if (n >= 4) {
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n%i == 0) return false;
+        }
+        return true;
+      }
+    }
+    function sumOfListPrime(x) {
+        sum = 0;
+        for (let i = 0; i <= x; i++) {
+            arr.push(i);
+            if (checkPrime(arr[i])) {
+                console.log(arr[i]);
+                sum += arr[i];
+            }
+        }
+        return sum;
+    }
+    document.write("Tống các số nguyên tố đến " + number + " là " + sumOfListPrime(number));
+</script>
+</html>
